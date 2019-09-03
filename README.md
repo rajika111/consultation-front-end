@@ -14,6 +14,7 @@
 1. Replace the `"homepage"` field in `package.json` with your (public) Github
    account name and repository name.
 1. Install dependencies with `npm install`.
+      - if it doesn't work run `npm update` then `npm rebuild node-sass` (this might take a while)
 1. `git add` and `git commit` your changes.
 1. Run the development server with `npm start`.
 
