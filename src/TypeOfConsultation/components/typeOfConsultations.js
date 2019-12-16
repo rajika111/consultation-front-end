@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAllTypeOfConsultations, deleteTypeOfConsultationsByID } from '../api';
+import { getAllTypeOfConsultations, deleteTypeOfConsultationByID } from '../api';
 import TypeOfConsultation from './typeOfConsultation';
 
 class TypeOfConsultations extends React.Component {
@@ -32,11 +32,11 @@ class TypeOfConsultations extends React.Component {
 
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
-        return <typeOfConsultation title={typeOfConsultation.title}
+        return <TypeOfConsultation title={typeOfConsultation.title}
                         author={typeOfConsultation.author}
                         content={typeOfConsultation.content}
                         id={typeOfConsultation._id}
-                        deletetypeOfConsultations={this.deleteTypeOfConsultation}
+                        deleteTypeOfConsultation={this.deleteTypeOfConsultation}
                         key={index} />;
       });
     }
@@ -45,4 +45,7 @@ class TypeOfConsultations extends React.Component {
   }
 }
 
-export default TypeOfConsultations;
+export default TypeOfConsultations; 
+
+
+
