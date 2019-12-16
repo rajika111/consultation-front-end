@@ -10,17 +10,21 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import AlertDismissible from './auth/components/AlertDismissible'
 import Blogs from './blog/components/blogs';
+import Consultations from './consultation/components/consultations'
+import TypeOfConsultations from './TypeOfConsultation/components/typeOfConsultations'
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
       user: null,
       alerts: [],
       blogs: [],
+      consultations: [],
+      typeOfConsultations: []
     };
-    
+
   }
 
   setUser = user => this.setState({ user })
@@ -34,9 +38,15 @@ class App extends Component {
   setBlogs = (blogs) => {
     this.setState({ blogs: blogs });
   }
+  setConsultations = (consultations) => {
+    this.setState({ consultations: consultations });
+  }
+  setTypeOfConsultations = (typeOfConsultations) => {
+    this.setState({ typeOfConsultations: typeOfConsultations });
+  }
 
 
-  render () {
+  render() {
     const { alerts, user } = this.state
 
     return (
@@ -46,8 +56,18 @@ class App extends Component {
           <AlertDismissible key={index} variant={alert.type} message={alert.message} />
         ))}
         <main className="container">
-        <Blogs blogs={this.state.blogs} 
-                  setBlogs={this.setBlogs} />
+          <Route exact path='/blog' render={() => (
+            <Blogs blogs={this.state.blogs}
+              setBlogs={this.setBlogs} />
+          )} />
+          <Route exact path='/consultation' render={() => (
+            <Consultations consultations={this.state.consultations}
+              setConsultations={this.setConsultations} />
+          )} />
+          <Route exact path='/typeOfConsultation' render={() => (
+            <TypeOfConsultations typeOfConsultations={this.state.typeOfConsultations}
+            setTypeOfConsultations={this.setTypeOfConsultations} />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
