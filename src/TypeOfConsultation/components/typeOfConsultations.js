@@ -1,10 +1,10 @@
 import React from 'react';
-import { getAllTypeOfConsultations, deleteTypeOfConsultationByID } from '../api';
+import { getAllTypeOfConsultation, deleteTypeOfConsultationByID } from '../api';
 import TypeOfConsultation from './typeOfConsultation';
 
 class TypeOfConsultations extends React.Component {
   componentDidMount() {
-    getAllTypeOfConsultations()
+    getAllTypeOfConsultation()
       .then((response) => {
         this.props.setTypeOfConsultations(response.data.typeOfConsultations);
       })
@@ -29,17 +29,17 @@ class TypeOfConsultations extends React.Component {
 
   render() {
     console.log(this.props);
-    
+
     let allTypeOfConsultations = <h2>No Type Of Consultations</h2>;
 
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
         return <TypeOfConsultation
-                        name={typeOfConsultation.name}
-                        description={typeOfConsultation.description}
-                        id={typeOfConsultation._id}
-                        deleteTypeOfConsultation={this.deleteTypeOfConsultation}
-                        key={index} />;
+          category={typeOfConsultation.category}
+          description={typeOfConsultation.description}
+          id={typeOfConsultation._id}
+          deleteTypeOfConsultation={this.deleteTypeOfConsultation}
+          key={index} />;
       });
     }
 

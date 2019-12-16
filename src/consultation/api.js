@@ -8,5 +8,5 @@ export const getAllConsultation = function () {
 
 // Delete Blog By ID
 export const deleteConsultationByID = function (id) {
-    return axios.delete(`${apiUrl}/consultations/${id}`);
+    return axios.delete(`${apiUrl}/consultation/${id}`);
 } 

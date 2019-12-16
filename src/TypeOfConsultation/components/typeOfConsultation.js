@@ -9,7 +9,7 @@ class TypeOfConsultation extends React.Component {
   render() {
     return (
       <div className="typeOfConsultation">
-        <h2>{this.props.name}</h2>
+        <h2>{this.props.category}</h2>
         <sub>{this.props.description}</sub>
        
         <a href="#" onClick={this.deleteTypeOfConsultation}>Delete</a>
