@@ -20,7 +20,8 @@ const alwaysOptions = (
   <React.Fragment>
     <Link to="/">Home</Link>
     <Link to="/consultation">consultation</Link>
-    <Link to="/blogs">blogs</Link>
+    <Link to="/blog">blogs</Link>
+    <Link to="/TypeOfConsultation">Type Of Consultation</Link>
   </React.Fragment>
 )
 
