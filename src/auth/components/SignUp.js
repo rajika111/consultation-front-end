@@ -11,7 +11,9 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password: '',
-      passwordConfirmation: ''
+      passwordConfirmation: '',
+      fullName: '',
+      phoneNum: '',
     }
   }
 
@@ -37,7 +39,7 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { email, password, passwordConfirmation, fullName, phoneNum } = this.state
 
     return (
       <form className='auth-form' onSubmit={this.onSignUp}>
@@ -68,6 +70,24 @@ class SignUp extends Component {
           value={passwordConfirmation}
           type="password"
           placeholder="Confirm Password"
+          onChange={this.handleChange}
+        />
+         <label htmlFor="fullName">fullName</label>
+        <input
+          required
+          name="fullName"
+          value={fullName}
+          type="fullName"
+          placeholder="fullName"
+          onChange={this.handleChange}
+        />
+         <label htmlFor="phoneNum">phoneNum</label>
+        <input
+          required
+          name="phoneNum"
+          value={phoneNum}
+          type="phoneNum"
+          placeholder="phoneNum"
           onChange={this.handleChange}
         />
         <button type="submit">Sign Up</button>
