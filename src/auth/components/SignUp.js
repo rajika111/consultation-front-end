@@ -12,8 +12,8 @@ class SignUp extends Component {
       email: '',
       password: '',
       passwordConfirmation: '',
-      name: '',
-      phone_no: '',
+      fullName: '',
+      phoneNum: '',
     }
   }
 
