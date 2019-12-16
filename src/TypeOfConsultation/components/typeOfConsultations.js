@@ -28,13 +28,15 @@ class TypeOfConsultations extends React.Component {
   }
 
   render() {
-    let allAtypeOfConsultations = <h2>No TypeOfConsultations</h2>;
+    console.log(this.props);
+    
+    let allTypeOfConsultations = <h2>No Type Of Consultations</h2>;
 
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
-        return <TypeOfConsultation title={typeOfConsultation.title}
-                        author={typeOfConsultation.author}
-                        content={typeOfConsultation.content}
+        return <TypeOfConsultation
+                        name={typeOfConsultation.name}
+                        description={typeOfConsultation.description}
                         id={typeOfConsultation._id}
                         deleteTypeOfConsultation={this.deleteTypeOfConsultation}
                         key={index} />;
@@ -46,6 +48,3 @@ class TypeOfConsultations extends React.Component {
 }
 
 export default TypeOfConsultations; 
-
-
-

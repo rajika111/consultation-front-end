@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // Get All Blogs
 export const getAllConsultation = function () {
-    return axios.get(`${apiUrl}/consultations`);
+    return axios.get(`${apiUrl}/api/consultation`);
 }
 
 // Delete Blog By ID
