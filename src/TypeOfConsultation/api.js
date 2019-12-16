@@ -2,7 +2,7 @@ import apiUrl from '../apiConfig';
 import axios from 'axios';
 
 // Get All TypeOfConsultations
-export const getAllTypeOfConsultationS = function() {
+export const getAllTypeOfConsultations = function() {
   return axios.get(`${apiUrl}/typeOfConsultations`);
 }
 

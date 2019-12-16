@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import './Header.scss'
 
 const authenticatedOptions = (
@@ -20,6 +19,9 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <React.Fragment>
     <Link to="/">Home</Link>
+    <Link to="/consultation">consultation</Link>
+    <Link to="/blog">blogs</Link>
+    <Link to="/TypeOfConsultation">Type Of Consultation</Link>
   </React.Fragment>
 )
 

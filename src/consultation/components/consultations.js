@@ -6,7 +6,7 @@ class Consultations extends React.Component {
   componentDidMount() {
     getAllConsultation()
       .then((response) => {
-        this.props.setConsultations(response.data.Consultations);
+        this.props.setConsultations(response.data.consultations);
       })
       .catch((error) => {
         console.log(error);
