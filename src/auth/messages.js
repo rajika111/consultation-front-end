@@ -1,7 +1,6 @@
 export default {
   signUpSuccess: 'Succesfully registered! You\'ve been signed in as well.',
-  signUpFailure: 'Registration failed. Email may be taked, or passwords' +
-   ' don\'t match.',
+  signUpFailure: 'Email address is already used, or check your confirmation pasword to match it with password',
   signInSuccess: 'Welcome!',
   signInFailure: 'Failed to sign in. Check your email and password and try' +
                   ' again.',
