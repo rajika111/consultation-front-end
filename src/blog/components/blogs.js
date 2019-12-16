@@ -28,7 +28,7 @@ class Blogs extends React.Component {
   }
 
   render() {
-    let allAblogs = <h2>No Blogs</h2>;
+    let allBlogs = <h2>No Blogs</h2>;
 
     if (this.props.blogs.length > 0) {
       allBlogs = this.props.blogs.map((blog, index) => {
