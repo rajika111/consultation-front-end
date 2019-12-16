@@ -9,6 +9,7 @@ import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import AlertDismissible from './auth/components/AlertDismissible'
+import Blogs from './blog/components/blogs';
 
 class App extends Component {
   constructor () {
@@ -16,8 +17,10 @@ class App extends Component {
 
     this.state = {
       user: null,
-      alerts: []
-    }
+      alerts: [],
+      blogs: [],
+    };
+    
   }
 
   setUser = user => this.setState({ user })
@@ -27,6 +30,11 @@ class App extends Component {
   alert = (message, type) => {
     this.setState({ alerts: [...this.state.alerts, { message, type }] })
   }
+
+  setBlogs = (blogs) => {
+    this.setState({ blogs: blogs });
+  }
+
 
   render () {
     const { alerts, user } = this.state
@@ -38,6 +46,8 @@ class App extends Component {
           <AlertDismissible key={index} variant={alert.type} message={alert.message} />
         ))}
         <main className="container">
+        <Blogs blogs={this.state.blogs} 
+                  setBlogs={this.setBlogs} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
