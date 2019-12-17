@@ -46,3 +46,16 @@ $charcoal: #ccc;
     max-width: 200px;
   }
 }
+.main-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.list {
+  margin: 1%;
+  width: 40vw;
+  height: 82vh;
+  padding: 10%;
+  background-color: #ccc;
+}
