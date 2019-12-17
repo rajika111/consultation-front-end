@@ -13,6 +13,7 @@ import Blogs from './blog/components/blogs';
 import Consultations from './consultation/components/consultations'
 import TypeOfConsultations from './TypeOfConsultation/components/typeOfConsultations'
 import Home from './home/home'
+import Errors from './error/error'
 
 class App extends Component {
   constructor() {
@@ -62,31 +63,31 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route path='/blog' render={() => (
             <Blogs blogs={this.state.blogs}
-              setBlogs={this.setBlogs} user={user} />
-          )} />
+            setBlogs={this.setBlogs} user={user} />
+            )} />
           <Route path='/consultation' render={() => (
             <Consultations consultations={this.state.consultations}
-              setConsultations={this.setConsultations} />
-          )} />
+            setConsultations={this.setConsultations} />
+            )} />
           <Route path='/typeOfConsultation' render={() => (
             <TypeOfConsultations typeOfConsultations={this.state.typeOfConsultations}
             setTypeOfConsultations={this.setTypeOfConsultations} />
-          )} />
-          </Switch>
+            )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
-          )} />
+            )} />
           <Route path='/sign-in' render={() => (
             <SignIn alert={this.alert} setUser={this.setUser} />
-          )} />
+            )} />
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
-          )} />
+            )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
-          )} />
+            )} />
+          <Route component={Errors} />
+          </Switch>
         </main>
-       
       </React.Fragment>
     )
   }

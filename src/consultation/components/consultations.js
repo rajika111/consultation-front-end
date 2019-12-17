@@ -14,13 +14,13 @@ class Consultations extends React.Component {
   }
 
   deleteConsultation = (id) => {
-    deleteConsultationByID(id)
+    deleteConsultationByID(id,this.props.user)
       .then((response) => {
         const newConsultationsList = this.props.consultations.filter((consultation) => {
           return consultation._id !== id;
         });
 
-        this.props.setConsultation(newConsultationsList);
+        this.props.setConsultations(newConsultationsList);
       })
       .catch((error) => {
         console.log(error);
