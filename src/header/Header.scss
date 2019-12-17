@@ -1,17 +1,29 @@
 $charcoal: #bbb;
 
 .main-header {
+  color: #FFF;
+  background-color: #131515;
   align-items: center;
   border-bottom: 1px solid $charcoal;
   display: flex;
   height: 100px;
   padding: 0 20px;
 
+  .logo{
+    height: 100px;
+    width: 100px;
+    background-image: url(https://i.ibb.co/H74tVx9/WEbsite-logo-1-1.png);
+    background-size: cover;
+  }
   a,
   span {
     font-size: 1.2em;
     margin: 0 15px;
   }
+}
+a{
+  text-decoration: none;
+  color: #FFF;
 }
 
 .main-header > nav {

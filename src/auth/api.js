@@ -1,6 +1,14 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
+export const add = req => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + `api/typeOfConsultation/${req.id}`
+   
+  })
+}
+
 export const signUp = credentials => {
   return axios({
     method: 'POST',
