@@ -58,7 +58,7 @@ class App extends Component {
         <main className="container">
           <Route path='/blog' render={() => (
             <Blogs blogs={this.state.blogs}
-              setBlogs={this.setBlogs} />
+              setBlogs={this.setBlogs} user={user} />
           )} />
           <Route path='/consultation' render={() => (
             <Consultations consultations={this.state.consultations}
