@@ -1,7 +1,7 @@
 import React from 'react';
 
 class TypeOfConsultation extends React.Component {
-  deleteTypeOfConsultation = (e) => {
+  deleteTypeOfConsultations = (e) => {
     e.preventDefault();
     this.props.deleteTypeOfConsultation(this.props.id);
   }
@@ -12,7 +12,7 @@ class TypeOfConsultation extends React.Component {
         <h2>{this.props.category}</h2>
         <sub>{this.props.description}</sub>
        
-        <a href="#" onClick={this.deleteTypeOfConsultation}>Delete</a>
+        <a href="#" onClick={this.deleteTypeOfConsultations}>Delete</a>
       </div>
     );
   }

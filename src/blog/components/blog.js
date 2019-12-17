@@ -10,7 +10,11 @@ class Blog extends React.Component {
     return (
       <div className="blogs">
         <h2>{this.props.title}</h2>
-        <sub>{this.props.content}</sub>
+        <sub>{this.props.auther}</sub>
+        <p>
+          {this.props.content}
+        </p>
+
        
         <a href="#" onClick={this.deleteBlogs}>Delete</a>
       </div>
