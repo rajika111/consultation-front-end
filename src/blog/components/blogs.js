@@ -14,7 +14,7 @@ class Blogs extends React.Component {
   }
 
   deleteBlog = (id) => {
-    deleteBlogByID(id)
+    deleteBlogByID(id,this.props.user)
       .then((response) => {
         const newBlogsList = this.props.blogs.filter((blog) => {
           return blog._id !== id;
