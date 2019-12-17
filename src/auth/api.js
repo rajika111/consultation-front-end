@@ -65,3 +65,48 @@ export const changePassword = (passwords, user) => {
     }
   })
 }
+
+// Create blog 
+export const createBlog = (blog, user) => {
+  return axios({
+    url: apiUrl + '/api/blogs',
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      blog: blog
+    }
+  })
+}
+
+// Create Consultation
+export const createConsultation = (consultation, user) => {
+  return axios({
+    url: apiUrl + '/api/consultations',
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      consultation: consultation
+    }
+  })
+}
+
+// Create Type Of Consultation 
+export const createTypeOfConsultation = (typeOfConsultation, user) => {
+  return axios({
+    url: apiUrl + '/api/typeOfConsultations',
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      typeOfConsultation: typeOfConsultation
+    }
+  })
+}
