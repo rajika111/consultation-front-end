@@ -1,6 +1,8 @@
 import React from 'react';
 import { getAllTypeOfConsultation, deleteTypeOfConsultationByID } from '../api';
+
 import TypeOfConsultation from './typeOfConsultation';
+import { Link } from 'react-router-dom';
 
 class TypeOfConsultations extends React.Component {
   componentDidMount() {
@@ -43,7 +45,12 @@ class TypeOfConsultations extends React.Component {
       });
     }
 
-    return allTypeOfConsultations;
+    return (
+      <div>
+        <Link to='/typeOfConsultation/createTypeOfConsultation'> <h3>Create TypeOfConsultation</ h3> </ Link>
+        {allTypeOfConsultations}
+      </ div>
+    );;
   }
 }
 
