@@ -1,9 +1,9 @@
 import React from 'react';
 
-class Blogs extends React.Component {
+class Blog extends React.Component {
   deleteBlogs = (e) => {
     e.preventDefault();
-    this.props.deleteBlogs(this.props.id);
+    this.props.deleteBlog(this.props.id);
   }
 
   render() {
@@ -18,4 +18,4 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs; 
+export default Blog; 
