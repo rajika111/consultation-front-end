@@ -47,7 +47,7 @@ class TypeOfConsultations extends React.Component {
 
     return (
       <div>
-        <Link to='/typeOfConsultation/createTypeOfConsultation'> <h3>Create TypeOfConsultation</ h3> </ Link>
+        <Link to='/typeOfConsultation/createTypeOfConsultation'> <h3>Create Type Of Consultation</ h3> </ Link>
         {allTypeOfConsultations}
       </ div>
     );;

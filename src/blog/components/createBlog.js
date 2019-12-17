@@ -69,7 +69,7 @@ class CreateBlog extends Component {
                     placeholder="Author"
                     onChange={this.handleChange}
                 />
-                <button type="submit">ADD blog</button>
+                <button type="submit">ADD Blog</button>
             </form>
         )
     }

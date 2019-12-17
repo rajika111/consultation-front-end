@@ -10,7 +10,7 @@ class Blog extends React.Component {
     return (
       <div className="blogs">
         <h2>{this.props.title}</h2>
-        <sub>{this.props.auther}</sub>
+        <sub>{this.props.author}</sub>
         <p>
           {this.props.content}
         </p>
