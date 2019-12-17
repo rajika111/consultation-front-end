@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
+
+
 const authenticatedOptions = (
   <React.Fragment>
     <Link to="/change-password">Change Password</Link>
@@ -28,6 +30,7 @@ const alwaysOptions = (
 const Header = ({ user }) => (
   <header className="main-header">
     <h1>Legal Consultation</h1>
+    <div class= "logo"></div>
     <nav>
       { user && <span>Welcome, {user.fullName}</span>}
       { user ? authenticatedOptions : unauthenticatedOptions }
