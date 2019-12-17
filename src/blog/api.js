@@ -9,8 +9,4 @@ export const getAllBlogs = function() {
 // Delete Blog By ID
 export const deleteBlogByID = function(id,userId) {
   return axios.delete(`${apiUrl}/api/blogs/${id}`);
-} 
-// Create Blog By ID
-export const createBlogByID = function(id,userId) {
-  return axios.create(`${apiUrl}/api/blogs/${id}`);
 }

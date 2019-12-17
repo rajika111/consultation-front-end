@@ -1,6 +1,8 @@
 import React from 'react';
 import { getAllBlogs, deleteBlogByID } from '../api';
+
 import Blog from './blog';
+import { Link } from 'react-router-dom';
 
 class Blogs extends React.Component {
   componentDidMount() {
@@ -14,7 +16,7 @@ class Blogs extends React.Component {
   }
 
   deleteBlog = (id) => {
-    deleteBlogByID(id,this.props.user)
+    deleteBlogByID(id, this.props.user)
       .then((response) => {
         const newBlogsList = this.props.blogs.filter((blog) => {
           return blog._id !== id;
@@ -33,15 +35,19 @@ class Blogs extends React.Component {
     if (this.props.blogs.length > 0) {
       allBlogs = this.props.blogs.map((blog, index) => {
         return <Blog title={blog.title}
-                        author={blog.author}
-                        content={blog.content}
-                        id={blog._id}
-                        deleteBlog={this.deleteBlog}
-                        key={index} />;
+          author={blog.author}
+          content={blog.content}
+          id={blog._id}
+          deleteBlog={this.deleteBlog}
+          key={index} />;
       });
     }
-
-    return allBlogs;
+    return (
+      <div>
+        <Link to='/blog/createBlog'> <h3>Create Blog</ h3> </ Link>
+        {allBlogs}
+      </ div>
+    );
   }
 }
 

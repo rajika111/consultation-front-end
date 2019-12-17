@@ -1,6 +1,9 @@
 import React from 'react';
 import { getAllConsultation, deleteConsultationByID } from '../api';
+
 import Consultation from './consultation';
+import { Link } from 'react-router-dom';
+
 
 class Consultations extends React.Component {
   componentDidMount() {
@@ -41,7 +44,12 @@ class Consultations extends React.Component {
       });
     }
 
-    return allConsultations;
+    return (
+      <div>
+        <Link to='/consultation/createConsultation'> <h3>Create Consultation</ h3> </ Link>
+        {allConsultations}
+      </ div>
+    );
   }
 }
 
