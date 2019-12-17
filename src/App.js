@@ -56,15 +56,15 @@ class App extends Component {
           <AlertDismissible key={index} variant={alert.type} message={alert.message} />
         ))}
         <main className="container">
-          <Route exact path='/blog' render={() => (
+          <Route path='/blog' render={() => (
             <Blogs blogs={this.state.blogs}
               setBlogs={this.setBlogs} />
           )} />
-          <Route exact path='/consultation' render={() => (
+          <Route path='/consultation' render={() => (
             <Consultations consultations={this.state.consultations}
               setConsultations={this.setConsultations} />
           )} />
-          <Route exact path='/typeOfConsultation' render={() => (
+          <Route path='/typeOfConsultation' render={() => (
             <TypeOfConsultations typeOfConsultations={this.state.typeOfConsultations}
             setTypeOfConsultations={this.setTypeOfConsultations} />
           )} />
