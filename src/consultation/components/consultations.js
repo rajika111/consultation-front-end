@@ -31,7 +31,7 @@ class Consultations extends React.Component {
   }
 
   render() {
-    let allConsultations = <h2>No Consultations</h2>;
+     let allConsultations = <h2>No Consultations</h2>;
 
     if (this.props.consultations.length > 0) {
       allConsultations = this.props.consultations.map((consultation, index) => {
