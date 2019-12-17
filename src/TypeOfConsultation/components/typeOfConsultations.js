@@ -14,7 +14,7 @@ class TypeOfConsultations extends React.Component {
   }
 
   deleteTypeOfConsultation = (id) => {
-    deleteTypeOfConsultationByID(id)
+    deleteTypeOfConsultationByID(id,this.props.user)
       .then((response) => {
         const newTypeOfConsultationsList = this.props.typeOfConsultations.filter((typeOfConsultation) => {
           return typeOfConsultation._id !== id;
