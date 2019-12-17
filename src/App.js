@@ -104,18 +104,18 @@ class App extends Component {
               <ChangePassword alert={this.alert} user={user} />
             )} />
 
-            
-            <AuthenticatedRoute user={user} render={() => (
+
+            <AuthenticatedRoute exact path='/blog/createBlog' user={user} render={() => (
               <CreateBlog createBlog={this.state.createBlog}
                 setCreateBlog={this.setCreateBlog} user={user} alert={this.alert} />
             )} />
-            <AuthenticatedRoute user={user} render={() => (
+            <AuthenticatedRoute exact path='/consultation/createConsultation' user={user} render={() => (
               <CreateConsultation createConsultation={this.state.createConsultation}
                 setCreateConsultation={this.setCreateConsultation} user={user} alert={this.alert} />
             )} />
-            <AuthenticatedRoute user={user} render={() => (
+            <AuthenticatedRoute exact path='/typeOfConsultation/createTypeOfConsultation' user={user} render={() => (
               <CreateTypeOfConsultation createTypeOfConsultation={this.state.createTypeOfConsultation}
-              setCreateTypeOfConsultation={this.setCreateTypeOfConsultation} user={user} alert={this.alert} />
+                setCreateTypeOfConsultation={this.setCreateTypeOfConsultation} user={user} alert={this.alert} />
             )} />
 
             <Route component={Errors} />
