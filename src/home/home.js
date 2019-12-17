@@ -21,7 +21,7 @@ const Home = (props) => {
 <li>local legal knowledge bas</li>
 </div>
 </div>   
-    );
-}
+    )
+};
 
 export default Home; 

@@ -30,7 +30,7 @@ class TypeOfConsultations extends React.Component {
   render() {
     console.log(this.props);
 
-    let allTypeOfConsultations = <h2>No Type Of Consultations</h2>;
+    let allTypeOfConsultations = <h2>No Type Of Consultations</h2>
 
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
