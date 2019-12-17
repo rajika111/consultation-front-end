@@ -72,7 +72,7 @@ class SignUp extends Component {
           placeholder="Confirm Password"
           onChange={this.handleChange}
         />
-         <label htmlFor="fullName">fullName</label>
+         <label htmlFor="fullName">Full Name</label>
         <input
           required
           name="fullName"
@@ -81,7 +81,7 @@ class SignUp extends Component {
           placeholder="fullName"
           onChange={this.handleChange}
         />
-         <label htmlFor="phoneNum">phoneNum</label>
+         <label htmlFor="phoneNum">Phone Number</label>
         <input
           required
           name="phoneNum"
