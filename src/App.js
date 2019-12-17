@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.scss'
-import { Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
@@ -12,6 +12,7 @@ import AlertDismissible from './auth/components/AlertDismissible'
 import Blogs from './blog/components/blogs';
 import Consultations from './consultation/components/consultations'
 import TypeOfConsultations from './TypeOfConsultation/components/typeOfConsultations'
+import Home from './home/home'
 
 class App extends Component {
   constructor() {
@@ -55,19 +56,23 @@ class App extends Component {
         {alerts.map((alert, index) => (
           <AlertDismissible key={index} variant={alert.type} message={alert.message} />
         ))}
+        
         <main className="container">
-          <Route exact path='/blog' render={() => (
+          <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/blog' render={() => (
             <Blogs blogs={this.state.blogs}
-              setBlogs={this.setBlogs} />
+              setBlogs={this.setBlogs} user={user} />
           )} />
-          <Route exact path='/consultation' render={() => (
+          <Route path='/consultation' render={() => (
             <Consultations consultations={this.state.consultations}
               setConsultations={this.setConsultations} />
           )} />
-          <Route exact path='/typeOfConsultation' render={() => (
+          <Route path='/typeOfConsultation' render={() => (
             <TypeOfConsultations typeOfConsultations={this.state.typeOfConsultations}
             setTypeOfConsultations={this.setTypeOfConsultations} />
           )} />
+          </Switch>
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
@@ -81,6 +86,7 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
         </main>
+       
       </React.Fragment>
     )
   }
