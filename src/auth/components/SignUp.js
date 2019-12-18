@@ -14,6 +14,7 @@ class SignUp extends Component {
       passwordConfirmation: '',
       fullName: '',
       phoneNum: '',
+      role: ''
     }
   }
 
@@ -23,7 +24,7 @@ class SignUp extends Component {
 
   onSignUp = event => {
     event.preventDefault()
-
+console.log(event)
     const { alert, history, setUser } = this.props
 
     signUp(this.state)
@@ -39,7 +40,7 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation, fullName, phoneNum } = this.state
+    const { email, password, passwordConfirmation, fullName, phoneNum, role } = this.state
 
     return (
       <form className='auth-form' onSubmit={this.onSignUp}>
@@ -90,6 +91,10 @@ class SignUp extends Component {
           placeholder="phoneNum"
           onChange={this.handleChange}
         />
+        <label htmlFor="role">Role</label>
+<input type="radio" name="role" value="costumer" onClick={this.handleChange} /> Costumer
+<input type="radio" name="role" value="consultant" onClick={this.handleChange}/> consultant  
+
         <button type="submit">Sign Up</button>
       </form>
     )

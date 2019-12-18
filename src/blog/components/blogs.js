@@ -30,16 +30,21 @@ class Blogs extends React.Component {
   }
 
   render() {
-    let allBlogs = <h2>No Blogs</h2>;
+    let allBlogs = <div className='container' >
+      <h2>No Blogs</h2>
+      </div>;
 
     if (this.props.blogs.length > 0) {
       allBlogs = this.props.blogs.map((blog, index) => {
-        return <Blog title={blog.title}
+        return <Blog 
+        user={this.props.user}
+        title={blog.title}
           author={blog.author}
           content={blog.content}
           id={blog._id}
+          blog={blog}
           deleteBlog={this.deleteBlog}
-          key={index} />;
+          key={index} />
       });
     }
     return (

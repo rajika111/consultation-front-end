@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { createTypeOfConsultation } from '../../auth/api'
+import { createTypeOfConsultation } from '../api'
 import messages from '../../auth/messages'
 
 class CreateTypeOfConsultation extends Component {
@@ -10,7 +10,8 @@ class CreateTypeOfConsultation extends Component {
 
         this.state = {
             category: '',
-            description: ''
+            description: '',
+            image: '',
         }
     }
 
@@ -29,17 +30,17 @@ class CreateTypeOfConsultation extends Component {
             .then(() => history.push('/typeOfConsultation'))
             .catch(error => {
                 console.error(error)
-                this.setState({ category: '', description: ''})
+                this.setState({ category: '', description: '', image: ''})
                 alert(messages.createTypeOfConsultationFailure, 'danger')
             })
     }
 
     render() {
-        const { category, description } = this.state
+        const { category, description, image } = this.state
 
         return (
             <form className='auth-form' onSubmit={this.oncreateTypeOfConsultation}>
-                <h3>create TypeOfConsultation</h3>
+                <h2>create TypeOfConsultation</h2>
 
                 <label htmlFor="Category">Category</label>
                 <input
@@ -57,6 +58,14 @@ class CreateTypeOfConsultation extends Component {
                     value={description}
                     type="description"
                     placeholder="Description"
+                    onChange={this.handleChange}
+                />
+                <label htmlFor="Image">Image</label>
+                <input
+                    name="image"
+                    value={image}
+                    type="description"
+                    placeholder="URL"
                     onChange={this.handleChange}
                 />
                 
