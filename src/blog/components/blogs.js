@@ -30,7 +30,9 @@ class Blogs extends React.Component {
   }
 
   render() {
-    let allBlogs = <h2>No Blogs</h2>;
+    let allBlogs = <div className='container' >
+      <h2>No Blogs</h2>
+      </div>;
 
     if (this.props.blogs.length > 0) {
       allBlogs = this.props.blogs.map((blog, index) => {
@@ -42,7 +44,7 @@ class Blogs extends React.Component {
           id={blog._id}
           blog={blog}
           deleteBlog={this.deleteBlog}
-          key={index} />;
+          key={index} />
       });
     }
     return (

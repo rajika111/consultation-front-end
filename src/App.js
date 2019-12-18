@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
+import Footer from './footer/footer'
 import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
@@ -149,6 +150,7 @@ class App extends Component {
             <Route component={Errors} />
           </Switch>
         </main>
+        <Footer user={user} />
       </React.Fragment>
     )
   }

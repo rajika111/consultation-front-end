@@ -9,7 +9,7 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <div className="blogs">
+      <div className="blogs container">
         <h2>{this.props.title}</h2>
         <sub>{this.props.author}</sub>
         <p>

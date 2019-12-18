@@ -166,3 +166,4 @@ export const editTypeOfConsultationById = function (typeOfConsultation,user) {
     }
   })
 }
+

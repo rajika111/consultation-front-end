@@ -40,6 +40,7 @@ class TypeOfConsultations extends React.Component {
           user={this.props.user}
           category={typeOfConsultation.category}
           description={typeOfConsultation.description}
+          image={typeOfConsultation.image}
           id={typeOfConsultation._id}
           typeOfConsultation={typeOfConsultation}
           deleteTypeOfConsultation={this.deleteTypeOfConsultation}
@@ -49,7 +50,7 @@ class TypeOfConsultations extends React.Component {
 
     return (
       <div>
-        <Link to='/typeOfConsultation/createTypeOfConsultation'> <h3>Create Type Of Consultation</ h3> </ Link>
+        <Link to='/typeOfConsultation/createTypeOfConsultation'> <button>Create Type Of Consultation</ button> </ Link>
         {allTypeOfConsultations}
       </ div>
     );;
