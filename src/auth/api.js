@@ -19,7 +19,8 @@ export const signUp = credentials => {
         password: credentials.password,
         password_confirmation: credentials.passwordConfirmation,
         fullName: credentials.fullName,
-        phoneNum: credentials.phoneNum
+        phoneNum: credentials.phoneNum,
+        role: credentials.role,
       }
     }
   })
