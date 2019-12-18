@@ -23,7 +23,7 @@ class Consultation extends React.Component {
             state: { info: this.props.consultation }
           }}
         >
-          <h3>Edit Consultation</ h3> </ Link>
+          <button>Edit Consultation</ button> </ Link>
       </div>
     );
   }
