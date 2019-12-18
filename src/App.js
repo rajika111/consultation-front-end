@@ -21,6 +21,10 @@ import CreateBlog from '../src/blog/components/createBlog'
 import CreateConsultation from '../src/consultation/components/createConsultation'
 import CreateTypeOfConsultation from '../src/TypeOfConsultation/components/createTypeOfConsultation'
 
+import EditBlog from '../src/blog/components/editBlog'
+import EditConsultation from '../src/consultation/components/editConsultation'
+import EditTypeOfConsultation from '../src/TypeOfConsultation/components/editTypeOfConsultation'
+
 
 class App extends Component {
   constructor() {
@@ -53,6 +57,7 @@ class App extends Component {
   setTypeOfConsultations = (typeOfConsultations) => {
     this.setState({ typeOfConsultations: typeOfConsultations });
   }
+
   setCreateBlog = (createBlog) => {
     this.setState({ createBlog: createBlog });
   }
@@ -61,6 +66,16 @@ class App extends Component {
   }
   setCreateTypeOfConsultation = (createTypeOfConsultation) => {
     this.setState({ createTypeOfConsultation: createTypeOfConsultation });
+  }
+
+  setEditBlog = (editBlog) => {
+    this.setState({ editBlog: editBlog });
+  }
+  setEditConsultation = (editConsultation) => {
+    this.setState({ editConsultation: editConsultation });
+  }
+  setEditTypeOfConsultation = (editTypeOfConsultation) => {
+    this.setState({ editTypeOfConsultation: editTypeOfConsultation });
   }
 
 
@@ -116,6 +131,19 @@ class App extends Component {
             <AuthenticatedRoute exact path='/typeOfConsultation/createTypeOfConsultation' user={user} render={() => (
               <CreateTypeOfConsultation createTypeOfConsultation={this.state.createTypeOfConsultation}
                 setCreateTypeOfConsultation={this.setCreateTypeOfConsultation} user={user} alert={this.alert} />
+            )} />
+
+            <AuthenticatedRoute exact path='/blogs/editBlog' user={user} render={(props) => (
+              <EditBlog editBlog={this.state.editBlog} {...props}
+                setEditBlog={this.setEditBlog} user={user} alert={this.alert} />
+            )} />
+            <AuthenticatedRoute exact path='/consultations/editConsultation' user={user} render={(props) => (
+              <EditConsultation editConsultation={this.state.editConsultation} {...props}
+                setEditConsultation={this.setEditConsultation} user={user} alert={this.alert} />
+            )} />
+            <AuthenticatedRoute exact path='/typeOfConsultations/editTypeOfConsultation' user={user} render={(props) => (
+              <EditTypeOfConsultation editTypeOfConsultation={this.state.editTypeOfConsultation} {...props}
+                setEditTypeOfConsultation={this.setEditTypeOfConsultation} user={user} alert={this.alert} />
             )} />
 
             <Route component={Errors} />
