@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { createBlog } from '../../auth/api'
+import { createBlog } from '../api'
 import messages from '../../auth/messages'
 
 class CreateBlog extends Component {
