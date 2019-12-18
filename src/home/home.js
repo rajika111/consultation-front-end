@@ -24,19 +24,17 @@ After that, simply enter in the best way for the lawyer to contact you. A cell p
         <div className="list">
 <h1>What we do</h1>
 
-<li>Our platform is region-specific and supports the unique set of features, including</li>
+                <li>Our platform is region-specific and supports the unique set of features, including</li>
 
-<li>multilingual support.</li>
-<li>anonymity for consumers.</li>
-<li>lawyers licensing check.</li>
-<li>two-level attorneys control system</li>
-<li>multiple channels for lawyer-consumer communication</li>
-<li>support for remote rendering of legal services</li>
-<li>local legal knowledge bas</li>
-
-
-</div>
-</div>   
+                <li>multilingual support.</li>
+                <li>anonymity for consumers.</li>
+                <li>lawyers licensing check.</li>
+                <li>two-level attorneys control system</li>
+                <li>multiple channels for lawyer-consumer communication</li>
+                <li>support for remote rendering of legal services</li>
+                <li>local legal knowledge bas</li>
+            </div>
+        </div>
     )
 };
 

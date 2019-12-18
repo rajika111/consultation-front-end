@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Blog extends React.Component {
   deleteBlogs = (e) => {
@@ -15,8 +16,20 @@ class Blog extends React.Component {
           {this.props.content}
         </p>
 
-       
-        <button href="#" onClick={this.deleteBlogs}>Delete</button>
+        {this.props.user ?
+          this.props.user.Role === 'Admin' ?
+            <button href="#" onClick={this.deleteBlogs}>Delete</button>
+            : false
+          : false}
+        <Link
+          to={{
+            pathname: "/blogs/editBlog",
+
+            state: { info: this.props.blog }
+          }}
+        >
+          <h3>Edit Blog</ h3> </ Link>
+
       </div>
     );
   }
