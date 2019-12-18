@@ -40,7 +40,7 @@ class CreateConsultation extends Component {
 
         return (
             <form className='auth-form' onSubmit={this.oncreateConsultation}>
-                <h3>Create Consultation</h3>
+                <h2>Create Consultation</h2>
 
                 <label htmlFor="Title">Title</label>
                 <input
@@ -60,7 +60,7 @@ class CreateConsultation extends Component {
                     placeholder="Content"
                     onChange={this.handleChange}
                 />
-                <label htmlFor="auther">Author</label>
+                <label htmlFor="author">Author</label>
                 <input
                     required
                     name="author"
