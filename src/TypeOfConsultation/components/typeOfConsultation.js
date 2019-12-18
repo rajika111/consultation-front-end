@@ -12,7 +12,7 @@ class TypeOfConsultation extends React.Component {
         <h2>{this.props.category}</h2>
         <sub>{this.props.description}</sub>
        
-        <a href="#" onClick={this.deleteTypeOfConsultations}>Delete</a>
+        <button href="#" onClick={this.deleteTypeOfConsultations}>Delete</button>
       </div>
     );
   }

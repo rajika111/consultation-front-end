@@ -16,7 +16,7 @@ class Blog extends React.Component {
         </p>
 
        
-        <a href="#" onClick={this.deleteBlogs}>Delete</a>
+        <button href="#" onClick={this.deleteBlogs}>Delete</button>
       </div>
     );
   }
