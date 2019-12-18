@@ -40,7 +40,7 @@ class Blogs extends React.Component {
           author={blog.author}
           content={blog.content}
           id={blog._id}
-
+          blog={blog}
           deleteBlog={this.deleteBlog}
           key={index} />;
       });

@@ -36,11 +36,11 @@ class CreateBlog extends Component {
     }
 
     render() {
-        const { title, content, auther } = this.state
+        const { title, content, author } = this.state
 
         return (
             <form className='auth-form' onSubmit={this.oncreateBlog}>
-                <button>Create Blog</button>
+                <h2>Create Blog</h2>
 
                 <label htmlFor="Title">Title</label>
                 <input
@@ -60,12 +60,12 @@ class CreateBlog extends Component {
                     placeholder="Content"
                     onChange={this.handleChange}
                 />
-                <label htmlFor="auther">Author</label>
+                <label htmlFor="author">Author</label>
                 <input
                     required
                     name="author"
-                    value={auther}
-                    type="auther"
+                    value={author}
+                    type="author"
                     placeholder="Author"
                     onChange={this.handleChange}
                 />
