@@ -24,3 +24,22 @@ export const createBlog = (blog, user) => {
     }
   })
 }
+// Edit blog
+export const editBlogById = function (blog,user) {
+  return axios({
+    url: `${apiUrl}/api/blogs/${blog.id}`,
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      blog: {
+        title: blog.title,
+        content: blog.content,
+        author: blog.author,
+        user: user._id
+      }
+    }
+  })
+}
