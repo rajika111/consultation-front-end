@@ -40,7 +40,7 @@ class CreateBlog extends Component {
 
         return (
             <form className='auth-form' onSubmit={this.oncreateBlog}>
-                <h3>Create Blog</h3>
+                <button>Create Blog</button>
 
                 <label htmlFor="Title">Title</label>
                 <input

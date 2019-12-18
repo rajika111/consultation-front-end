@@ -29,6 +29,22 @@ a{
   color: #FFF;
 }
 
+.create{
+  color: #FFF;
+  background-color: #131515;
+  align-items: center;
+  border-bottom: 1px solid $charcoal;
+  height:80px;
+  padding: 20px;
+
+}
+
+button {
+  margin: 2%;
+  background-color: #131515;
+  color: #FFF;
+  padding: 5px;
+}
 .main-header > nav {
   align-items: center;
   display: flex;
