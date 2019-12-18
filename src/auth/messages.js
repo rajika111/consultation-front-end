@@ -8,10 +8,18 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password' +
     ' and try again.',
+
   createBlogFailure: "Failed to create Blog.",
-  createBlogSuccess: "Succefully crearted Blog.",
+  createBlogSuccess: "Succefully created Blog.",
   createConsultationFailure: "Failed to create Consultation.",
-  createConsultationSuccess: "Succefully crearted Consultation.",
+  createConsultationSuccess: "Succefully created Consultation.",
   createTypeOfConsultationFailure: "Failed to create Type Of Consultation.",
-  createTypeOfConsultationSuccess: "Succefully crearted Type Of Consultation."
+  createTypeOfConsultationSuccess: "Succefully created Type Of Consultation.",
+
+  editBlogFailure: "Failed to create Blog.",
+  editBlogSuccess: "Succefully edited Blog.",
+  editConsultationFailure: "Failed to edit Consultation.",
+  editConsultationSuccess: "Succefully edited Consultation.",
+  editTypeOfConsultationFailure: "Failed to edit Type Of Consultation.",
+  editTypeOfConsultationSuccess: "Succefully edited Type Of Consultation."
 }
