@@ -44,7 +44,7 @@ class Blogs extends React.Component {
     }
     return (
       <div>
-        <Link to='/blog/createBlog'> <h3>Create Blog</ h3> </ Link>
+        <Link to='/blog/createBlog'> <button>Create Blog</button> </ Link>
         {allBlogs}
       </ div>
     );

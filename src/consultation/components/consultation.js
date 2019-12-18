@@ -14,7 +14,7 @@ class Consultation extends React.Component {
         <p>
           {this.props.content}
         </p>
-        <a href="#" onClick={this.deleteConsultations}>Delete</a>
+        <button href="#" onClick={this.deleteConsultations}>Delete</button>
       </div>
     );
   }
