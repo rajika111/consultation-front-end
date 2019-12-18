@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
-import { editTypeOfConsultationById } from '../../auth/api'
+import { editTypeOfConsultationById } from '../api'
 import messages from '../../auth/messages'
 class EditTypeOfConsultation extends Component {
     constructor() {
