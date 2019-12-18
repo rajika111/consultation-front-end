@@ -17,7 +17,7 @@ class Blog extends React.Component {
         </p>
 
         {this.props.user ?
-          this.props.user.Role === 'Admin' ?
+          this.props.user.Role === 'admin' ?
             <button href="#" onClick={this.deleteBlogs}>Delete</button>
             : false
           : false}
@@ -28,7 +28,7 @@ class Blog extends React.Component {
             state: { info: this.props.blog }
           }}
         >
-          <h3>Edit Blog</ h3> </ Link>
+          <button>Edit Blog</ button> </ Link>
 
       </div>
     );
