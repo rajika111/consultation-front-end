@@ -1,47 +1,55 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
-
-import { createConsultation } from '../api'
+import { Link, Redirect } from 'react-router-dom';
+import { editBlogById } from '../../auth/api'
 import messages from '../../auth/messages'
-
-class CreateConsultation extends Component {
+class EditBlog extends Component {
     constructor() {
         super()
-
         this.state = {
             title: '',
             content: '',
             author: ''
         }
     }
+    componentDidMount() {
+        const { info } = this.props.location.state
+        console.log(this.props);
 
+        let title = info.title
+        let content = info.content
+        let author = info.author
+
+        let id = info._id
+        this.setState({
+            title, content, author, id
+        })
+    }
     handleChange = event => this.setState({
         [event.target.name]: event.target.value
     })
-
-    oncreateConsultation = event => {
+    onEditBlog = event => {
         event.preventDefault()
-
-        const { alert, history, setUser } = this.props
-
-        createConsultation(this.state, this.props.user)
-            .then(res => {})
-            .then(() => alert(messages.createConsultationSuccess, 'success'))
-            .then(() => history.push('/consultation'))
+        const { alert, history, user } = this.props
+        editBlogById(this.state, this.props.user)
+            .then((response) => { })
+            .then(() => alert(messages.editBlogSuccess, 'success'))
+            .then(() => history.push('/blog'))
             .catch(error => {
-                console.error(error)
-                this.setState({ title: '', content: '', author: '' })
-                alert(messages.createConsultationFailure, 'danger')
+                console.log(error)
+                this.setState({
+                    title: '',
+                    content: '',
+                    author: '',
+                })
+                alert(messages.editBlogFailure, 'danger')
             })
     }
 
     render() {
-        const { title, content, auther } = this.state
-
+        const { title, content, author } = this.state
         return (
-            <form className='auth-form' onSubmit={this.oncreateConsultation}>
-                <h2>Create Consultation</h2>
-
+            <form className='auth-form' onSubmit={this.onEditBlog}>
+                <h3>Edit A Blog</h3>
                 <label htmlFor="Title">Title</label>
                 <input
                     required
@@ -64,15 +72,14 @@ class CreateConsultation extends Component {
                 <input
                     required
                     name="author"
-                    value={auther}
+                    value={author}
                     type="author"
                     placeholder="Author"
                     onChange={this.handleChange}
                 />
-                <button type="submit">ADD Consultation</button>
+                <button type="submit">ADD Blog</button>
             </form>
         )
     }
 }
-
-export default withRouter(CreateConsultation);
+export default EditBlog;

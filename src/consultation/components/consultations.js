@@ -39,6 +39,7 @@ class Consultations extends React.Component {
                         author={consultation.author}
                         content={consultation.content}
                         id={consultation._id}
+                        consultation={consultation}
                         deleteConsultation={this.deleteConsultation}
                         key={index} />;
       });

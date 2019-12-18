@@ -40,7 +40,7 @@ class CreateTypeOfConsultation extends Component {
 
         return (
             <form className='auth-form' onSubmit={this.oncreateTypeOfConsultation}>
-                <h3>create TypeOfConsultation</h3>
+                <h2>create TypeOfConsultation</h2>
 
                 <label htmlFor="Category">Category</label>
                 <input
