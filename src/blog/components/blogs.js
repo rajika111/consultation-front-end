@@ -34,10 +34,13 @@ class Blogs extends React.Component {
 
     if (this.props.blogs.length > 0) {
       allBlogs = this.props.blogs.map((blog, index) => {
-        return <Blog title={blog.title}
+        return <Blog 
+        user={this.props.user}
+        title={blog.title}
           author={blog.author}
           content={blog.content}
           id={blog._id}
+
           deleteBlog={this.deleteBlog}
           key={index} />;
       });
