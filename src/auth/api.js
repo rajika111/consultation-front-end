@@ -111,17 +111,58 @@ export const createTypeOfConsultation = (typeOfConsultation, user) => {
   })
 }
 
-export const editBlog = (blog, user) => {
+export const editBlogById = function (blog,user) {
   return axios({
-    url: apiUrl + '/api/blogs/:id',
-    method: 'pathc',
+    url: `${apiUrl}/api/blogs/${blog.id}`,
+    method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${user.token}` // FOR EXPRESS
       // 'Authorization': `Token ${user.token}` // FOR RAILS
     },
     data: {
-      old: oldBlog,
-      new: newBlog
+      blog: {
+        title: blog.title,
+        content: blog.content,
+        author: blog.author,
+        user: user._id
+      }
+    }
+  })
+}
+
+export const editConsultationById = function (consultation,user) {
+  return axios({
+    url: `${apiUrl}/api/consultations/${consultation.id}`,
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      consultation: {
+        title: consultation.title,
+        content: consultation.content,
+        author: consultation.author,
+        user: user._id
+      }
+    }
+  })
+}
+
+export const editTypeOfConsultationById = function (typeOfConsultation,user) {
+  return axios({
+    url: `${apiUrl}/api/typeOfConsultations/${typeOfConsultation.id}`,
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      typeOfConsultation: {
+        title: typeOfConsultation.category,
+        content: typeOfConsultation.description,
+        user: user._id
+      }
     }
   })
 }
