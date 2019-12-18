@@ -10,7 +10,8 @@ class CreateTypeOfConsultation extends Component {
 
         this.state = {
             category: '',
-            description: ''
+            description: '',
+            image: '',
         }
     }
 
@@ -29,13 +30,13 @@ class CreateTypeOfConsultation extends Component {
             .then(() => history.push('/typeOfConsultation'))
             .catch(error => {
                 console.error(error)
-                this.setState({ category: '', description: ''})
+                this.setState({ category: '', description: '', image: ''})
                 alert(messages.createTypeOfConsultationFailure, 'danger')
             })
     }
 
     render() {
-        const { category, description } = this.state
+        const { category, description, image } = this.state
 
         return (
             <form className='auth-form' onSubmit={this.oncreateTypeOfConsultation}>
@@ -57,6 +58,14 @@ class CreateTypeOfConsultation extends Component {
                     value={description}
                     type="description"
                     placeholder="Description"
+                    onChange={this.handleChange}
+                />
+                <label htmlFor="Image">Image</label>
+                <input
+                    name="image"
+                    value={image}
+                    type="description"
+                    placeholder="URL"
                     onChange={this.handleChange}
                 />
                 
