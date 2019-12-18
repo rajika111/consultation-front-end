@@ -17,10 +17,11 @@ class Blog extends React.Component {
 
         {this.props.user ?
           this.props.user.Role === 'Admin' ?
-            <a href="#" onClick={this.deleteBlogs}>Delete</a>
+          <button href="#" onClick={this.deleteBlogs}>Delete</button>
             :false
             :false}
             <Link to='/blog/editBlog'> <h3>Edit Blog</ h3> </ Link>
+       
       </div>
     );
   }
