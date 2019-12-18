@@ -110,3 +110,18 @@ export const createTypeOfConsultation = (typeOfConsultation, user) => {
     }
   })
 }
+
+export const editBlog = (blog, user) => {
+  return axios({
+    url: apiUrl + '/api/blogs/:id',
+    method: 'pathc',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      old: oldBlog,
+      new: newBlog
+    }
+  })
+}
