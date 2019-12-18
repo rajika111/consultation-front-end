@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TypeOfConsultation extends React.Component {
   deleteTypeOfConsultations = (e) => {
@@ -13,6 +14,14 @@ class TypeOfConsultation extends React.Component {
         <sub>{this.props.description}</sub>
        
         <button href="#" onClick={this.deleteTypeOfConsultations}>Delete</button>
+        <Link
+          to={{
+            pathname: "/typeOfConsultations/editTypeOfConsultation",
+
+            state: { info: this.props.typeOfConsultation }
+          }}
+        >
+          <h3>Edit Type Of Consultation</ h3> </ Link>
       </div>
     );
   }

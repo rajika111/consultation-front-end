@@ -37,9 +37,11 @@ class TypeOfConsultations extends React.Component {
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
         return <TypeOfConsultation
+          user={this.props.user}
           category={typeOfConsultation.category}
           description={typeOfConsultation.description}
           id={typeOfConsultation._id}
+          typeOfConsultation={typeOfConsultation}
           deleteTypeOfConsultation={this.deleteTypeOfConsultation}
           key={index} />;
       });
