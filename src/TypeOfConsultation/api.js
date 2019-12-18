@@ -24,3 +24,22 @@ export const createTypeOfConsultation = (typeOfConsultation, user) => {
     }
   })
 }
+
+// Edit Type of Consultation
+export const editTypeOfConsultationById = function (typeOfConsultation,user) {
+  return axios({
+    url: `${apiUrl}/api/typeOfConsultations/${typeOfConsultation.id}`,
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${user.token}` // FOR EXPRESS
+      // 'Authorization': `Token ${user.token}` // FOR RAILS
+    },
+    data: {
+      typeOfConsultation: {
+        title: typeOfConsultation.category,
+        content: typeOfConsultation.description,
+        user: user._id
+      }
+    }
+  })
+}

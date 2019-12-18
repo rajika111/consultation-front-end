@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
-import { editBlogById } from '../../auth/api'
+import { editBlogById } from '../api'
 import messages from '../../auth/messages'
 class EditBlog extends Component {
     constructor() {

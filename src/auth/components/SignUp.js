@@ -92,9 +92,10 @@ console.log(event)
           onChange={this.handleChange}
         />
         <label htmlFor="role">Role</label>
-<input type="radio" name="role" value="costumer" onClick={this.handleChange} /> Costumer
-<input type="radio" name="role" value="consultant" onClick={this.handleChange}/> consultant  
-
+        <span>
+<input class="with-gap" type="radio" name="role" value="costumer" onClick={this.handleChange} />Costumer 
+<input class="with-gap" type="radio" name="role" value="consultant" onClick={this.handleChange}/>consultant
+</span>
         <button type="submit">Sign Up</button>
       </form>
     )
