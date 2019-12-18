@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { createTypeOfConsultation } from '../../auth/api'
+import { createTypeOfConsultation } from '../api'
 import messages from '../../auth/messages'
 
 class CreateTypeOfConsultation extends Component {
