@@ -1,6 +1,6 @@
 import React from 'react';
 import { getAllTypeOfConsultation, deleteTypeOfConsultationByID } from '../api';
-
+import './type.scss'
 import TypeOfConsultation from './typeOfConsultation';
 import { Link } from 'react-router-dom';
 

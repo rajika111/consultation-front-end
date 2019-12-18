@@ -32,7 +32,7 @@ After that, simply enter in the best way for the lawyer to contact you. A cell p
                 <li>two-level attorneys control system</li>
                 <li>multiple channels for lawyer-consumer communication</li>
                 <li>support for remote rendering of legal services</li>
-                <li>local legal knowledge bas</li>
+                <li>local legal knowledge base</li>
             </div>
         </div>
     )
