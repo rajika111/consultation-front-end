@@ -10,8 +10,8 @@ export default {
     ' and try again.',
   createBlogFailure: "Failed to create Blog.",
   createBlogSuccess: "Succefully crearted Blog.",
-  createConsultationFailure: "Failed to create Consultatio.",
-  createConsultationSuccess: "Succefully crearted Consultatio.",
+  createConsultationFailure: "Failed to create Consultation.",
+  createConsultationSuccess: "Succefully crearted Consultation.",
   createTypeOfConsultationFailure: "Failed to create Type Of Consultation.",
   createTypeOfConsultationSuccess: "Succefully crearted Type Of Consultation."
 }
