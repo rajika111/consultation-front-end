@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './type.scss';
 class TypeOfConsultation extends React.Component {
   deleteTypeOfConsultations = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ class TypeOfConsultation extends React.Component {
             state: { info: this.props.typeOfConsultation }
           }}
         >
-          <h3>Edit Type Of Consultation</ h3> </ Link>
+          <button>Edit Type Of Consultation</ button> </ Link>
       </div>
     );
   }
