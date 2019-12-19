@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../../TypeOfConsultation/components/type.scss';
 class Consultation extends React.Component {
   deleteConsultations = (e) => {
     e.preventDefault();
@@ -10,11 +10,13 @@ class Consultation extends React.Component {
   render() {
     return (
       <div className="consultations">
+        <div class= "textbox">
         <h2>{this.props.title}</h2>
         <sub>{this.props.author}</sub>
         <p>
           {this.props.content}
         </p>
+        </div>
         <button href="#" onClick={this.deleteConsultations}>Delete</button>
         <Link
           to={{
