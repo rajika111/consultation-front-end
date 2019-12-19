@@ -18,6 +18,7 @@ class TypeOfConsultation extends React.Component {
               <p class="card-text">{this.props.description}</p>
               <div class="card-footer">
                <button href="#" onClick={this.deleteTypeOfConsultations}>Delete</button>
+
         <Link
           to={{
             pathname: "/typeOfConsultations/editTypeOfConsultation",
