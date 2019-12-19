@@ -32,7 +32,18 @@ class TypeOfConsultations extends React.Component {
   render() {
     console.log(this.props);
 
-    let allTypeOfConsultations = <h2>No Type Of Consultations</h2>
+    let allTypeOfConsultations =  <div>
+    <div class="card-group">
+      <div class="card">
+          <div class="card-body">
+           <h5 class="card-title">Empty</h5>
+           
+  </div>
+</div>
+</div>
+<br></br>
+</div>
+   
 
     if (this.props.typeOfConsultations.length > 0) {
       allTypeOfConsultations = this.props.typeOfConsultations.map((typeOfConsultation, index) => {
